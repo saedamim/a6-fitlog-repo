@@ -15,13 +15,13 @@ const Navbar = () => {
             className="object-contain"
           />
         </Link>
-        <h2 className="text-xl font-mono"> FITLOG</h2> 
+        <Link href= "/" className="text-xl btn btn-ghost font-mono"> FITLOG</Link> 
         </div>
         
 
        
         <div className="flex items-center gap-10">
-          <Link href="/Workouts"
+          <Link href="/"
            className="btn rounded-2xl hover:bg-lime-950 hover:text-lime-500 btn-ghost">Workouts</Link>
 
           <Link
