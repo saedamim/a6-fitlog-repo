@@ -71,3 +71,18 @@ export const addToSaved = (workout) => {
 
   return true;
 };
+
+  export const removeFromPlan = (id) => {
+    const plan = getPlan();
+    const updatedPlan = plan.filter(
+      (workout) =>
+        String(workout.id) !== String(id)
+    );
+
+    localStorage.setItem(
+      PLAN_KEY,
+      JSON.stringify(updatedPlan)
+    );
+
+    setPlan(updatedPlan);
+  };

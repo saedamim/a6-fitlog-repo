@@ -1,18 +1,10 @@
 "use client";
 
-import { LuCalendarPlus2 } from "react-icons/lu";
-import { CiBookmark } from "react-icons/ci";
 import Image from "next/image";
-import { useState } from "react";
-import { addToPlan } from "./planStorage";
+import { AddToSaved } from "../addToSaved";
+import AddToPlan from "../addToPlan";
 
 const WorkoutDetails = ({ workout }) => {
-  const [added, setAdded] = useState(false);
-  const [saved, setSaved] = useState(false);
-  const addWorkout = (workout) => {
-    setAdded(!added);
-    addToPlan(workout);
-  };
   return (
     <main className="min-h-screen bg-[#191a20] px-4 py-10 text-white sm:px-6 lg:px-8">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-14">
@@ -104,34 +96,10 @@ const WorkoutDetails = ({ workout }) => {
               <li key={index}>{instruction}</li>
             ))}
           </ol>
-          <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-            <button
-              onClick={() => addWorkout(workout)}
-              className="btn bg-lime-400 text-black hover:bg-lime-300"
-            >
-              {added ? (
-                "✓ Added to Plan"
-              ) : (
-                <>
-                  <LuCalendarPlus2 />
-                  Add to todays plan
-                </>
-              )}
-            </button>
 
-            <button
-              onClick={() => setSaved(!saved)}
-              className="btn border border-gray-600 bg-transparent text-white"
-            >
-              {saved ? (
-                "Saved"
-              ) : (
-                <>
-                  <CiBookmark />
-                  Save for later
-                </>
-              )}
-            </button>
+          <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+            <AddToPlan workout={workout} />
+            <AddToSaved workout={workout} />
           </div>
         </div>
       </div>
