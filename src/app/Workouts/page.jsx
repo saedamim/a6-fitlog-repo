@@ -1,12 +1,12 @@
-import WorkoutLibrery from '@/component/shared/homepage/WorkoutLibrery';
-import React from 'react';
+import WorkoutLibrery from "@/component/shared/homepage/WorkoutLibrery";
+import React from "react";
 
 const WorkOutPage = () => {
-    return (
-         <main>
+  return (
+    <main>
       <WorkoutLibrery />
-    </main>
-    );
+    </main> 
+  );
 };
 
 export default WorkOutPage;
