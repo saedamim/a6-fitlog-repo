@@ -37,7 +37,7 @@ FitLog was created as a frontend project to practice **Next.js, React, API integ
 
 ##Github Repository Link:-
 
-
+https://github.com/saedamim/a6-fitlog-repo.git
 
 ##  Developer
 
