@@ -1,10 +1,11 @@
+import WorkoutLibrery from '@/component/shared/homepage/WorkoutLibrery';
 import React from 'react';
 
 const WorkOutPage = () => {
     return (
-        <div>
-            <h2>workout</h2>
-        </div>
+         <main>
+      <WorkoutLibrery />
+    </main>
     );
 };
 

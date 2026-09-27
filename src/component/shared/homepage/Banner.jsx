@@ -20,17 +20,13 @@ const Banner = () => {
           FitLog is a dark, no-nonsense gym companion: pick a lift, lock it into
           todays plan, and watch the weeks work add up.
         </p>
-        <button
-          onClick={() => {
-            document
-              .getElementById("workout-library")
-              ?.scrollIntoView({ behavior: "smooth" });
-          }}
-          className="cursor-pointer bg-lime-400 inline-flex px-4 py-2 mt-6 rounded gap-2 items-center text-black font-bold text-xs"
-        >
-          <IoBarbell className="size-4" />
-          BROWSE WORKOUTS
-        </button>
+    <Link
+  href="/workouts"
+  className="cursor-pointer bg-lime-400 inline-flex px-4 py-2 mt-6 rounded gap-2 items-center text-black font-bold text-xs"
+>
+  <IoBarbell className="size-4" />
+  BROWSE WORKOUTS
+</Link>
       </div>
       <div className='className="w-full lg:w-1/2 flex justify-center lg:justify-end mt-8 lg:mt-0'>
         <Image
